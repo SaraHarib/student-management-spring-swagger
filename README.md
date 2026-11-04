@@ -39,7 +39,7 @@ Quelques routes : `GET /students/all`, `GET /students/{id}`, `POST /students/sav
 
 ## Tests
 
-Le projet contient des tests JUnit avec Mockito : ils couvrent notamment les réponses HTTP, les données invalides, les cas introuvables, et les opérations du service. Les tests utilisent des dépendances simulées et ne doivent pas nécessiter une base MySQL active pour ces classes.
+Le projet contient des tests JUnit avec Mockito : ils couvrent notamment les réponses HTTP, les données invalides, les cas introuvables, et les opérations du service. Les tests de contrôleur et de service utilisent des dépendances simulées et n'ont pas besoin de MySQL. Le test `StudentManagementApplicationTests.contextLoads()` démarre l'application et **nécessite une base MySQL/MariaDB accessible** avec la configuration de `application.properties` (ou des variables d'environnement adaptées).
 
 ```bash
 ./mvnw test
